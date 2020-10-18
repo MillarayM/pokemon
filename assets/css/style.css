@@ -1,0 +1,163 @@
+/*
+
+git
+git add --all
+git commit -m "subida de desafios"
+git push -u portafolio main
+
+div{
+    border:1px solid;
+}
+
+font-family: 'Raleway', sans-serif;
+font-family: 'Sansita Swashed', cursive;
+400 700
+
+	font-family: 'Conv_Pokemon Hollow';
+	src: url('fonts/Pokemon Hollow.eot');
+	src: local('☺'), url('fonts/Pokemon Hollow.woff') format('woff'), url('fonts/Pokemon Hollow.ttf') format('truetype'), url('fonts/Pokemon Hollow.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+@font-face {
+	font-family: 'Conv_Pokemon Solid';
+	src: url('fonts/Pokemon Solid.eot');
+	src: local('☺'), url('fonts/Pokemon Solid.woff') format('woff'), url('fonts/Pokemon Solid.ttf') format('truetype'), url('fonts/Pokemon Solid.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+
+
+
+*/
+
+
+div{
+    border:1px solid;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+
+body {
+    background-image: url(paisaje2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+
+
+#pokeball{
+    width: 50px;
+    height: 50px;
+}
+
+/* navbar */
+.navbar {   
+    background-color: #17a2b8; 
+    font-family: 'Conv_Pokemon Hollow';    
+    font-size: 30px;
+    font-weight: normal;
+}
+
+
+header{
+    font-family: 'Conv_Pokemon Hollow';   
+
+}
+
+#botonRedondo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+ 
+
+}
+
+
+
+
+
+/* clases usos general 
+
+
+
+
+
+.hero-section {
+    text-align: center;
+    background-image: url(fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    text-shadow: 2px 3px 3px #707070;
+    padding: 6.125rem 6.125rem;
+    }
+    
+
+hr {
+    width: 35%;
+    height: 8px;
+}
+
+.tcentrado {
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
+/* header 
+
+#nombreheader {
+    padding-top: 400px;
+}
+
+
+
+.botoncolor {
+    background-color: #088A68;
+}
+
+
+
+.colorfondo {
+    background-color: #FF8000;
+}
+
+
+#contactopc {
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+}
+
+.izquierda {
+    text-align: right;
+}
+
+
+.oscuro {
+    background: #000f08;
+    color: #ffffff;
+}
+
+
+.oscuro a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+
+.letra {
+    font-family:'Sansita Swashed', cursive;
+    color: bg-dark;
+    font-weight: 400;
+}
+*/
