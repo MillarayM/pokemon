@@ -23,9 +23,6 @@ $(document).ready(function(){
             $("#pesoPokemon").html(data.weight)
             $("#alturapokemon").html(data.height)
           
-            
-
-           
           
             $("#imagenFrente").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`);
             
