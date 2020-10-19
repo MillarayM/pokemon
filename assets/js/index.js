@@ -18,10 +18,13 @@ $(document).ready(function(){
         success: function (data) {
             
           
-            $("#pokemon").html(data.name)
+            $("#pokemon").html(data.name); 
             $("#identificadorPokemon").html(data.id)
             $("#pesoPokemon").html(data.weight)
             $("#alturapokemon").html(data.height)
+
+            
+         //   $("#tipopokemon").html(data.types[0].name)
           
           
             $("#imagenFrente").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`);
@@ -34,22 +37,22 @@ $(document).ready(function(){
   
             let estadisticaPokemon =  puntosVida = data.stats[0].base_stat; puntosAtaque = data.stats[1].base_stat; puntosDefensa = data.stats[2].base_stat; ataqueEspecial = data.stats[3].base_stat; defensaEspecial = data.stats[4].base_stat; velocidad = data.stats[5].base_stat;
             canvas(estadisticaPokemon)
-         
-  
-  
+          
   
         },
         dataType: 'json'
     });
   }
   
+  $("#paraToggle").click(function(){
+    $("#chartContainer").slideToggle();
+  });
+
+ /* $("#imagenFrente").click(function(){
+    $("div").animate({left: '250px'});
+  }); */
   
-  
-  
-  
-  
-  
-  // constants and variables
+  // tipos para clases / iconos
   var tipoPokemon = [ 
     'normal', 'fighting', 'flying',
     'poison', 'ground', 'rock',
@@ -77,7 +80,7 @@ $(document).ready(function(){
     exportEnabled: true,
     animationEnabled: true,
     title: {
-        text: "Estadistica"
+        text: "Estadística"
     },
     data: [{
         type: "bar",

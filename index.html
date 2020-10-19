@@ -19,9 +19,9 @@
     <!-- google font -->
     <link rel="stylesheet" href="assets/fuentes/Pokemon Hollow/fontsh.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="assets/fuentes/Pokemon Solid/fonts.css" type="text/css" charset="utf-8" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Sansita+Swashed:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="assets/fuentes/LatoLatin/latolatinfonts.css" rel="stylesheet" type="text/css">
+    <link href="assets/fuentes/LatoLatin/latostyle.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Sansita+Swashed:wght@400;700&display=swap" rel="stylesheet">
 
 
     <!-- font awesome -->
@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link  text-white" href="#SobrePokemon">PoKémon</a>
+                        <a class="nav-link  text-white" href="#">PoKémon</a>
                     </li>
                 </ul>
             </div>
@@ -59,14 +59,14 @@
  
         <section class="container">
             <div class="row">
-                <div class="input-group mb-3 w-25 m-auto col-8 p-5 ">
+                <div class="input-group mb-3 w-25 m-auto col-8 py-5 ">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Ingresa número de Pokémon que buscas</span>
                     </div>
-                    <input id="input" type="text" class="form-control" placeholder="Nº Pokémon" aria-label="Username"
+                    <input id="input" type="text" class="form-control" placeholder="Nº Pokémon del 1 a 807" aria-label="Username"
                         aria-describedby="basic-addon1">
                 </div>
-                <div class="col-4 p-5">
+                <div class="col-4 ">
                     <button id="botonRedondo" type="button" class="btn btn-danger btn-outline-dark ">go!</button>
                 </div>
 
@@ -81,10 +81,10 @@
                 </div>
                 <div class="col">
                     <h2 id="pokemon" class="card-title"></h2>
-                    <p>Identificador <span id="identificadorPokemon"></span></p>
-                    <p>Peso <span id="pesoPokemon"></span></p>
-                    <p>Altura <span id="alturapokemon"></span></p>
-                    <p>Tipo buscar <span id="tipopokemon"></span></p>
+                    <p>Identificador: <span id="identificadorPokemon"></span></p>
+                    <p>Peso: <span id="pesoPokemon"></span></p>
+                    <p>Altura: <span id="alturapokemon"></span></p>
+                    <p>Tipo buscar: <span id="tipopokemon"></span></p>
                     <img id="imagenBaila" src="">
                      </div>
                 <div class="col">
@@ -97,7 +97,10 @@
 
     <!-- inicio grafico-->
 
-        <section class="container p-5">
+        <section  class="container p-5">
+
+            <button id="paraToggle" type="button" class="btn btn-info">Conocer Estadísticas</button>
+
             <div id="chartContainer" style="height: 300px; width: 100%;"></div>
         </section>
 
