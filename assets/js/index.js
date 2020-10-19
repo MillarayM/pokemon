@@ -19,29 +19,6 @@ $(document).ready(function(){
             
           $("#pokemon").html(data.name); 
 
-/*  var cadena = new String("todo en mayusculas"); 
-cadena = cadena.toUpperCase(); 
-document.write(cadena); 
-nombreMayus = (${data.name})
-$("#pokemon").html(nombreMayus); 
-
-nombreMayus = toUpperCase(data.name)
-$("#pokemon").html(nombreMayus); 
-
-let nombreMayus = toUpperCase(data.name)
-$("#pokemon").html(nombreMayus); 
-
-          let nombreMayus = toUpperCase(`${data.name}`)
-          $("#pokemon").html(nombreMayus); 
-
-
-  $("#pokemon").html(data.name); 
-
-*/
-
-
-
-
             $("#identificadorPokemon").html(data.id)
             $("#pesoPokemon").html(data.weight)
             $("#alturapokemon").html(data.height)
