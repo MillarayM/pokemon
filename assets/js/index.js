@@ -17,15 +17,37 @@ $(document).ready(function(){
         url: `https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`,
         success: function (data) {
             
-          
-            $("#pokemon").html(data.name); 
+          $("#pokemon").html(data.name); 
+
+/*  var cadena = new String("todo en mayusculas"); 
+cadena = cadena.toUpperCase(); 
+document.write(cadena); 
+nombreMayus = (${data.name})
+$("#pokemon").html(nombreMayus); 
+
+nombreMayus = toUpperCase(data.name)
+$("#pokemon").html(nombreMayus); 
+
+let nombreMayus = toUpperCase(data.name)
+$("#pokemon").html(nombreMayus); 
+
+          let nombreMayus = toUpperCase(`${data.name}`)
+          $("#pokemon").html(nombreMayus); 
+
+
+  $("#pokemon").html(data.name); 
+
+*/
+
+
+
+
             $("#identificadorPokemon").html(data.id)
             $("#pesoPokemon").html(data.weight)
             $("#alturapokemon").html(data.height)
-
-            
-         //   $("#tipopokemon").html(data.types[0].name)
-          
+            $("#tipopokemon").html(data.types[0].type.name)
+           
+              
           
             $("#imagenFrente").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`);
             
@@ -52,7 +74,7 @@ $(document).ready(function(){
     $("div").animate({left: '250px'});
   }); */
   
-  // tipos para clases / iconos
+  // tipos para clases para iconos
   var tipoPokemon = [ 
     'normal', 'fighting', 'flying',
     'poison', 'ground', 'rock',
