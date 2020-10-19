@@ -1,79 +1,45 @@
-/* Cargar desde el inicio consulta Canvas */
 $(document).ready(function(){
   consultaAPI("pikachu")
-  canvas()  
-  })
-
-/* sacar informacion con boton */
-
-$("button").click(function(){
-  let pokemon = $("#input").val()
-  alert("pokemon" + pokemon)
-
-$("#muestranumero h2").append( `<br>${pokemon}` );
-
-  consultaAPI(pokemon)
-})
-
-
-
-
-
-
-
-/*
-$(document).ready(function(){
-  consultaAPI("pikachu")
-  canvas()  
+  canvas()
+  
   })
   
   $("button").click(function(){
       let pokemon = $("#input").val()
       consultaAPI(pokemon)
   })
-  
-  function consultaAPI(nombrePokemon) {
-      $.ajax({
-          type: "GET",
-          url: `https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`,
-          success: function (data) {
-                            $("#pokemon").html(data.name)
-              let defensa = data.stats[2].base_stat
-              canvas(defensa)
-          },
-          dataType: 'json'
-      });
-  }
-  
-  
-  
-  
-  // Canvas
-  
-  function canvas(defensa){
-      var chart = new CanvasJS.Chart("chartContainer", {
-      theme: "light2", // "light1", "light2", "dark1", "dark2"
-      exportEnabled: true,
-      animationEnabled: true,
-      title: {
-          text: "Desktop Browser Market Share in 2016"
+
+
+
+function consultaAPI(nombrePokemon) {
+  $.ajax({
+      type: "GET",
+      url: `https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`,
+      success: function (data) {
+          
+        
+          $("#pokemon").html(data.name)
+          $("#identificadorPokemon").html(data.id)
+          $("#pesoPokemon").html(data.weight)
+          $("#alturapokemon").html(data.height)
+        
+          $("#imagenFrente").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`);
+          
+          $("#imagenBack").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`);
+         
+          $("#imagenBaila").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${data.id}.gif`);
+
+         
+
+          let defensa = data.stats[2].base_stat
+          canvas(defensa)
+
+
+
       },
-      data: [{
-          type: "pie",
-          startAngle: 25,
-          toolTipContent: "<b>{label}</b>: {y}",
-          showInLegend: "true",
-          legendText: "{label}",
-          indexLabelFontSize: 16,
-          indexLabel: "{label} - {y}",
-          dataPoints: [
-              { y: defensa, label: "defensa" },
-          ]
-      }]
+      dataType: 'json'
   });
-  chart.render();
-  }
-  
+}
 
 
 
@@ -81,74 +47,50 @@ $(document).ready(function(){
 
 
 
+// constants and variables
+var tipoPokemon = [ 
+  'normal', 'fighting', 'flying',
+  'poison', 'ground', 'rock',
+  'bug', 'ghost', 'steel',
+  'fire', 'water', 'grass',
+  'electric', 'psychic', 'ice',
+  'dragon', 'dark', 'fairy'
+];
+
+var tipoPokemonESP = [ 
+  'normal', 'lucha', 'volador',
+  'veneno', 'tierra', 'roca',
+  'bicho', 'fantasma', 'acero',
+  'fuego', 'agua', 'planta',
+  'eléctrico', 'psíquico', 'hielo',
+  'dragón', 'siniestro', 'hada'
+];
 
 
+// Canvas
+    
+function canvas(defensa){
+  var chart = new CanvasJS.Chart("chartContainer", {
+  theme: "light2", // "light1", "light2", "dark1", "dark2"
+  exportEnabled: true,
+  animationEnabled: true,
+  title: {
+      text: "Desktop Browser Market Share in 2016"
+  },
+  data: [{
+      type: "pie",
+      startAngle: 25,
+      toolTipContent: "<b>{label}</b>: {y}",
+      showInLegend: "true",
+      legendText: "{label}",
+      indexLabelFontSize: 16,
+      indexLabel: "{label} - {y}",
+      dataPoints: [
+          { y: defensa, label: "defensa" },
+      ]
+  }]
+});
+chart.render();
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
-
-
-
-$("#titulotrabajos1").click(function(){
-    $("#titulotrabajos1").addClass('letra')    ;
-  })
-
-
-  $("#titulotrabajos2").click(function(){
-    $("#titulotrabajos2").addClass('letra')    ;
-  })
-
-  $("#titulotrabajos3").click(function(){
-    $("#titulotrabajos3").addClass('letra')    ;
-  })
-
-  $("#titulotrabajos4").click(function(){
-    $("#titulotrabajos4").addClass('letra')    ;
-  })
-
-  $("#titulotrabajos5").click(function(){
-    $("#titulotrabajos5").addClass('letra')    ;
-  })
-
-  $("#titulotrabajos6").click(function(){
-    $("#titulotrabajos6").addClass('letra')    ;
-  })
-
-
-  $("#tarjeta1").click(function(){
-
-    $("#contenido1").toggle('slow')    ;
-  
-  })
-
-
-  $("#tarjeta2").click(function(){
-
-    $("#contenido2").toggle('slow')    ;
-  
-  })
-
-
-  $("#tarjeta3").click(function(){
-
-    $("#contenido3").toggle('slow')    ;
-  
-  })
-
-
-*/
 
