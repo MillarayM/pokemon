@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="assets/fuentes/Pokemon Solid/fonts.css" type="text/css" charset="utf-8" />
     <link href="assets/fuentes/LatoLatin/latolatinfonts.css" rel="stylesheet" type="text/css">
     <link href="assets/fuentes/LatoLatin/latostyle.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Sansita+Swashed:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Sansita+Swashed:wght@400;700&display=swap"
+        rel="stylesheet">
 
 
     <!-- font awesome -->
@@ -56,62 +58,97 @@
     <!-- fin navbarr-->
 
     <!-- ingreso numero pokemon-->
- 
-        <section class="container">
-            <div class="row">
-                <div class="input-group mb-3 w-25 m-auto col-8 py-5 ">
-                    <div class="input-group-prepend">
-                        <p class="input-group-text" id="basic-addon1">Ingresa número de Pokémon que buscas</p>
-                    </div>
-                    <input id="input" type="text" class="form-control" placeholder="Nº Pokémon del 1 a 893" aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="col-4 ">
-                    <button id="botonRedondo" type="button" class="btn btn-danger btn-outline-dark ">go!</button>
-                </div>
 
+    <section class="container">
+        <div class="row">
+            <div class="input-group mb-3 w-25 m-auto col-8 py-5 ">
+                <div class="input-group-prepend">
+                    <p class="input-group-text" id="basic-addon1">Ingresa número de Pokémon que buscas</p>
+                </div>
+                <input id="input" type="text" class="form-control" placeholder="Nº Pokémon del 1 a 893"
+                    aria-label="Username" aria-describedby="basic-addon1">
             </div>
-        </section>
+            <div class="col-4 ">
+                <button id="botonRedondo" type="button" class="btn btn-danger btn-outline-dark ">go!</button>
+            </div>
+
+        </div>
+    </section>
     <!-- Inicio muestra nombre e imagen-->
 
-        <section id="datosPokemon" class="p-5 text-white container">
-            <div class="row">
-                <div class="col">
-                    <img id="imagenFrente" src="">
-                </div>
-                <div class="col">
-                    <h2 id="pokemon" class="card-title"></h2>
-                    <p>Identificador: <span id="identificadorPokemon"></span></p>
-                    <p>Peso: <span id="pesoPokemon"></span> kg</p>
-                    <p>Altura: <span id="alturapokemon"></span> mts.</p>
-                    <p>Tipo: <span id="tipopokemon"></span></p>
-                    <img id="imagenBaila" src="">
-                     </div>
-                <div class="col">
-                    <img id="imagenOficial" src="">
-                </div>
+    <section id="datosPokemon" class="p-5 text-white container">
+        <div class="row">
+            <div class="col">
+                <img id="imagenFrente" src="">
             </div>
-        </section>
+            <div class="col">
+                <h2 id="pokemon" class="card-title"></h2>
+                <p>Identificador: <span id="identificadorPokemon"></span></p>
+                <p>Peso: <span id="pesoPokemon"></span> kg</p>
+                <p>Altura: <span id="alturapokemon"></span> mts.</p>
+                <p>Tipo: <span id="tipopokemon"></span>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                        Logo Tipo
+                    </button>
+
+                    <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Tipo Pokémon</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div id="colorFondoTipoPokemon" class="modal-body">
+                                <img id="imagenTipoPokemon" src="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </p>
+                <img id="imagenBaila" src="">
+            </div>
+            <div class="col">
+                <img id="imagenOficial" src="">
+            </div>
+        </div>
+    </section>
 
     <!-- fin muestra nombre e imagen-->
 
     <!-- inicio grafico-->
 
-        <section  class="container p-5">
+    <section class="container p-5">
 
-            <button id="paraToggle" type="button" class="btn btn-info">On/Off Características</button>
+        <button id="paraToggle" type="button" class="btn btn-info">On/Off Características</button>
 
-            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-        </section>
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    </section>
 
-<!-- fin grafico-->
+    <!-- fin grafico-->
 
 
-        <!--script -->
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- JS, Popper.js,jQuery, mi script -->
 
-        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-        <script src="assets/js/index.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
 
 </html>

@@ -1,4 +1,4 @@
-// cargar desde el inio
+
 $(document).ready(function () {
   consultaAPI("pikachu")
   canvas()
@@ -25,15 +25,25 @@ function consultaAPI(nombrePokemon) {
       $("#alturapokemon").html(data.height / 10)
       $("#tipopokemon").html(data.types[0].type.name)
 
-      // imagenes
+      // variable tipo Pokemon
+      var tipoPokemon = data.types[0].type.name
+
+
+
+
+      // variable imagenes
       var imagensvg = data.sprites.other.dream_world.front_default
       var imagenpng = data.sprites.other["official-artwork"].front_default
-      var imagenbaila = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${data.id}.gif`) 
-     
+      var imagenbaila = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${data.id}.gif`)
+
+      // data.sprites.versions["generation-v[1]"].animated.front_default
+
+
       // imagen svg
-      if (imagensvg !== null) {$("#imagenFrente").attr("src", data.sprites.other.dream_world.front_default);
-        
-      } else if(imagenpng !== null){ $("#imagenFrente").attr("src", data.sprites.other["official-artwork"].front_default)}
+      if (imagensvg !== null) {
+        $("#imagenFrente").attr("src", data.sprites.other.dream_world.front_default);
+
+      } else if (imagenpng !== null) { $("#imagenFrente").attr("src", data.sprites.other["official-artwork"].front_default) }
       else {
         $("#imagenFrente").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`)
       }
@@ -42,13 +52,14 @@ function consultaAPI(nombrePokemon) {
       if (imagenpng !== null) {
         $("#imagenOficial").attr("src", data.sprites.other["official-artwork"].front_default)
       }
-        else { $("#imagenOficial").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`)}
+      else { $("#imagenOficial").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`) }
 
       // imagen baila
       if (imagenbaila !== "") {
         $("#imagenBaila").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${data.id}.gif`);
-        
-      } else {  $("#imagenBaila").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`)}
+
+      } else { $("#imagenBaila").attr("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`) }
+
 
 
 
@@ -105,20 +116,142 @@ $("#paraToggle").click(function () {
  }); */
 
 // tipos para clases para iconos
-var tipoPokemon = [
-  'normal', 'fighting', 'flying',
-  'poison', 'ground', 'rock',
-  'bug', 'ghost', 'steel',
-  'fire', 'water', 'grass',
-  'electric', 'psychic', 'ice',
-  'dragon', 'dark', 'fairy'
+var tipoPokemonArray = [
+
+  {
+    nombreTipo: "bug",
+    nombreTipoEsp: "bicho",
+    colorTipo: "#A8B820",
+    imagenTipo: "tiposicono/Bug.png"
+  },
+
+  {
+    nombreTipo: "dark",
+    nombreTipoEsp: "siniestro",
+    colorTipo: "#7A5848",
+    imagenTipo: "tiposicono/Dark.png"
+  },
+
+  {
+    nombreTipo: "dragon",
+    nombreTipoEsp: "dragón",
+    colorTipo: "#7860E0",
+    imagenTipo: "tiposicono/Dragon.png"
+  },
+
+  {
+    nombreTipo: "electric",
+    nombreTipoEsp: "eléctrico",
+    colorTipo: "#F8D030",
+    imagenTipo: "tiposicono/Electric.png"
+  },
+
+  {
+    nombreTipo: "fairy",
+    nombreTipoEsp: "hada",
+    colorTipo: "#E79FE7",
+    imagenTipo: "tiposicono/Fairy.png"
+  },
+
+  {
+    nombreTipo: "fighting",
+    nombreTipoEsp: "lucha",
+    colorTipo: "#A05038",
+    imagenTipo: "tiposicono/Fighting.png"
+  },
+
+
+  {
+    nombreTipo: "fire",
+    nombreTipoEsp: "fuego",
+    colorTipo: "#F05030",
+    imagenTipo: "tiposicono/Firepng"
+  },
+
+  {
+    nombreTipo: "flying",
+    nombreTipoEsp: "volador",
+    colorTipo: "#98A8F0",
+    imagenTipo: "tiposicono/Flying.png"
+  },
+
+  {
+    nombreTipo: "ghost",
+    nombreTipoEsp: "fantasma",
+    colorTipo: "#6060B0",
+    imagenTipo: "tiposicono/Ghost.png"
+  },
+
+  {
+    nombreTipo: "grass",
+    nombreTipoEsp: "planta",
+    colorTipo: "#78C850",
+    imagenTipo: "tiposicono/Grass.png"
+  },
+
+  {
+    nombreTipo: "ground",
+    nombreTipoEsp: "tierra",
+    colorTipo: "#E9D6A4",
+    imagenTipo: "tiposicono/Ground.png"
+  },
+  {
+    nombreTipo: "ice",
+    nombreTipoEsp: "hielo",
+    colorTipo: "#58C8E0",
+    imagenTipo: "tiposicono/Ice.png"
+  },
+
+  {
+    nombreTipo: "normal",
+    nombreTipoEsp: "normal",
+    colorTipo: "#A8A090",
+    imagenTipo: "tiposicono/Normal.png"
+  },
+
+  {
+    nombreTipo: "poison",
+    nombreTipoEsp: "veneno",
+    colorTipo: "#B058A0",
+    imagenTipo: "tiposicono/Poison.png"
+  },
+
+  {
+    nombreTipo: "psychic",
+    nombreTipoEsp: "psíquico",
+    colorTipo: "#F870A0",
+    imagenTipo: "tiposicono/Psychic.png"
+  },
+
+  {
+    nombreTipo: "rock",
+    nombreTipoEsp: "roca",
+    colorTipo: "#B8A058",
+    imagenTipo: "tiposicono/Rock.png"
+  },
+
+  {
+    nombreTipo: "steel",
+    nombreTipoEsp: "acero",
+    colorTipo: "#A8A8C0",
+    imagenTipo: "tiposicono/Steel.png"
+  },
+
+
+  {
+    nombreTipo: "water",
+    nombreTipoEsp: "agua",
+    colorTipo: "#3899F8",
+    imagenTipo: "tiposicono/Water.png"
+  },
 ];
 
-var tipoPokemonESP = [
-  'normal', 'lucha', 'volador',
-  'veneno', 'tierra', 'roca',
-  'bicho', 'fantasma', 'acero',
-  'fuego', 'agua', 'planta',
-  'eléctrico', 'psíquico', 'hielo',
-  'dragón', 'siniestro', 'hada'
-];
+
+
+// cambiar colore segun tipo de pokemon
+function tipoPokemonModal(){
+
+
+  $("#colorFondoTipoPokemon").ccs("background-color", "colorTipo")
+  $("#imagenTipoPokemon").attr("src", tipoPokemonArray.imagenTipo)
+}
