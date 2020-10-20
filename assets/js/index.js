@@ -174,9 +174,9 @@ var iterador = 0
 $(document).ready(function () {
   $("#botonTipoPokemon").click(function tipoPokemonModal() {
    
-   $("#nombreTipoEng").html(data.types[0].type.name)  
+  // $("#nombreTipoEng").html(data.types[0].type.name)  
    // $("#nombreTipoEng").html(`${tipoPokemon}`)  
-  //  $("#nombreTipoEng").html(tipoPokemonArray[iterador].nombreTipo)    
+    $("#nombreTipoEng").html(tipoPokemonArray[iterador].nombreTipo)    
     $("#imagenTipoPokemon").attr("src", tipoPokemonArray[iterador].imagenTipo)
     $("#nombreTipoEsp").html(tipoPokemonArray[iterador].nombreTipoEsp)
     $("#colorFondoTipoPokemon").css("background-color", tipoPokemonArray[iterador].colorTipo)
