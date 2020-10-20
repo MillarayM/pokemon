@@ -61,9 +61,9 @@
             <div class="row">
                 <div class="input-group mb-3 w-25 m-auto col-8 py-5 ">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">Ingresa número de Pokémon que buscas</span>
+                        <p class="input-group-text" id="basic-addon1">Ingresa número de Pokémon que buscas</p>
                     </div>
-                    <input id="input" type="text" class="form-control" placeholder="Nº Pokémon del 1 a 807" aria-label="Username"
+                    <input id="input" type="text" class="form-control" placeholder="Nº Pokémon del 1 a 893" aria-label="Username"
                         aria-describedby="basic-addon1">
                 </div>
                 <div class="col-4 ">
@@ -82,13 +82,13 @@
                 <div class="col">
                     <h2 id="pokemon" class="card-title"></h2>
                     <p>Identificador: <span id="identificadorPokemon"></span></p>
-                    <p>Peso: <span id="pesoPokemon"></span></p>
-                    <p>Altura: <span id="alturapokemon"></span></p>
+                    <p>Peso: <span id="pesoPokemon"></span> kg</p>
+                    <p>Altura: <span id="alturapokemon"></span> mts.</p>
                     <p>Tipo: <span id="tipopokemon"></span></p>
                     <img id="imagenBaila" src="">
                      </div>
                 <div class="col">
-                    <img id="imagenBack" src="">
+                    <img id="imagenOficial" src="">
                 </div>
             </div>
         </section>
@@ -99,7 +99,7 @@
 
         <section  class="container p-5">
 
-            <button id="paraToggle" type="button" class="btn btn-info">Conocer Estadísticas</button>
+            <button id="paraToggle" type="button" class="btn btn-info">On/Off Características</button>
 
             <div id="chartContainer" style="height: 300px; width: 100%;"></div>
         </section>
