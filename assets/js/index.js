@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   consultaAPI("pikachu")
   canvas()
@@ -174,8 +173,50 @@ var iterador = 0
 $(document).ready(function () {
   $("#botonTipoPokemon").click(function tipoPokemonModal() {
    
-  // $("#nombreTipoEng").html(data.types[0].type.name)  
-   // $("#nombreTipoEng").html(`${tipoPokemon}`)  
+var tipoPokemonModal = $('#tipopokemon').html();
+
+switch (tipoPokemonModal){
+  case "bug": iterador = 0;
+  break;
+  case "dark": iterador = 1;
+  break;
+  case "dragon": iterador = 2;
+  break;
+  case "electric": iterador = 3;
+  break;
+  case "fairy": iterador = 4;
+  break;
+  case "fighting": iterador = 5;
+  break;
+  case "fire": iterador = 6;
+  break;
+  case "flying": iterador = 7;
+  break;
+  case "ghost": iterador = 8;
+  break;
+  case "grass": iterador = 9;
+  break;
+  case "ground": iterador = 10;
+  break;
+  case "ice": iterador = 11;
+  break;
+  case "normal": iterador = 12;
+  break;
+  case "poison": iterador = 13;
+  break;
+  case "psychic": iterador = 14;
+  break;
+  case "rock": iterador = 15;
+  break;
+  case "steel": iterador = 16;
+  break;
+  case "water": iterador = 17;
+  break;
+  default:
+    break;
+ 
+}
+
     $("#nombreTipoEng").html(tipoPokemonArray[iterador].nombreTipo)    
     $("#imagenTipoPokemon").attr("src", tipoPokemonArray[iterador].imagenTipo)
     $("#nombreTipoEsp").html(tipoPokemonArray[iterador].nombreTipoEsp)
@@ -183,5 +224,3 @@ $(document).ready(function () {
   
   })
 })
-
-
