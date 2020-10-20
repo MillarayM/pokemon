@@ -80,7 +80,41 @@
                 <p>Identificador: <span id="identificadorPokemon"></span></p>
                 <p>Peso: <span id="pesoPokemon"></span> kg</p>
                 <p>Altura: <span id="alturapokemon"></span> mts.</p>
-                <p>Tipo: <span id="tipopokemon"></span></p>
+                <p>Tipo: <span id="tipopokemon"></span>
+                <!-- inicio modal -->
+                
+                
+                 <!-- Button trigger modal -->
+                 <button id="botonTipoPokemon"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    go!
+                </button>
+
+                <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-dark" id="nombreTipoEsp">Tipo Pokémon</h5>
+                            <button id="botonTipoPokemon" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div id="colorFondoTipoPokemon" class="modal-body">                                
+                        <img id="imagenTipoPokemon" src=" ">                             
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+                
+                
+                <!-- fin modal -->
+                </p>
                 <img id="imagenBaila" src="">
             </div>
             <div class="col">
